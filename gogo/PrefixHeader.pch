@@ -1,0 +1,99 @@
+//
+//  PrefixHeader.pch
+//  gogo
+//
+//  Created by by.huang on 2017/9/18.
+//  Copyright © 2017年 by.huang. All rights reserved.
+//
+
+
+#import "Constant.h"
+#import "Masonry.h"
+#import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
+#import "AFNetworking.h"
+#import "MJExtension.h"
+#import "MBProgressHUD.h"
+#import "ColorUtil.h"
+#import "PUtil.h"
+#import "Singleton.h"
+#import "ByNetUtil.h"
+#import "Constant.h"
+#import "DialogHelper.h"
+#import "UILabel+ContentSize.h"
+#import "UIView+Frame.h"
+#import <AlipaySDK/AlipaySDK.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <Masonry/Masonry.h>
+#import "UMMobClick/MobClick.h"
+#import "UMUtil.h"
+#import "ByLog.h"
+
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+//获取当前屏幕的高度
+#define ScreenHeight ([[UIScreen mainScreen] bounds].size.height)
+//获取当前屏幕的宽度
+#define ScreenWidth  ([[UIScreen mainScreen] bounds].size.width)
+//状态栏高度
+#define StatuBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height)
+//导航栏高度
+#define NavigationBarHeight 48
+//除导航栏和状态栏剩余高度
+#define ContentHeight (ScreenHeight - StatuBarHeight - NavigationBarHeight)
+
+
+//手机型号
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_678 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_678P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+#define IS_IPHONE_X ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+//颜色
+#define c01_blue      [ColorUtil colorWithHexString:@"#495AFF"]
+#define c02_red       [ColorUtil colorWithHexString:@"#F43B47"]
+#define c03_yellow    [ColorUtil colorWithHexString:@"#FFAB13"]
+#define c04_green     [ColorUtil colorWithHexString:@"#4E9D58"]
+#define c05_divider   [ColorUtil colorWithHexString:@"#2E3259"]
+#define c06_backgroud [ColorUtil colorWithHexString:@"#252845"]
+#define c07_bar       [ColorUtil colorWithHexString:@"#1F2038"]
+#define c08_text      [ColorUtil colorWithHexString:@"#FFFFFF"]
+#define c09_tips      [ColorUtil colorWithHexString:@"#B1BAEE"]
+#define c10_icon      [ColorUtil colorWithHexString:@"#4B5B91"]
+
+
+#define c11_bg1       [ColorUtil colorWithHexString:@"#110E1F"]
+#define c12_bg2       [ColorUtil colorWithHexString:@"#1C1531"]
+#define c13_text1     [ColorUtil colorWithHexString:@"#495AFF"]
+#define c14_text2     [ColorUtil colorWithHexString:@"#B1BAEE"]
+#define c15_text3     [ColorUtil colorWithHexString:@"#F1B74C"]
+
+#define WarnColor   [UIColor colorWithRed:0xFF/255.0 green:0x54/255.0 blue:0x54/255.0 alpha:1.0]
+
+
+//重写NSLog,Debug模式下打印日志和当前行数
+#if DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) nil
+#endif
+
+
+#define IS_NS_COLLECTION_EMPTY(collection) (collection == nil || [collection count] == 0)
+
+#define IS_NS_STRING_EMPTY(str) (str == nil || [str isEqualToString:@""])
+
+
+#define Color_RGB(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0  alpha:1.0]
+#define Color_RGB_Alpha(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0  alpha:(a)]
+#define Color_Random           [UIColor colorWithRed:arc4random()%256/255.0 green:arc4random()%256/255.0 blue:arc4random()%256/255.0 alpha:1.0]
+
+
+#endif

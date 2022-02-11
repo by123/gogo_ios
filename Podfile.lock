@@ -1,0 +1,63 @@
+PODS:
+  - AFNetworking (3.2.0):
+    - AFNetworking/NSURLSession (= 3.2.0)
+    - AFNetworking/Reachability (= 3.2.0)
+    - AFNetworking/Security (= 3.2.0)
+    - AFNetworking/Serialization (= 3.2.0)
+    - AFNetworking/UIKit (= 3.2.0)
+  - AFNetworking/NSURLSession (3.2.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.0)
+  - AFNetworking/Security (3.2.0)
+  - AFNetworking/Serialization (3.2.0)
+  - AFNetworking/UIKit (3.2.0):
+    - AFNetworking/NSURLSession
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - HappyDNS (0.3.12)
+  - Masonry (1.1.0)
+  - MBProgressHUD (0.9.2)
+  - MJExtension (3.0.13)
+  - MJRefresh (3.1.15.3)
+  - Qiniu (7.2.3):
+    - HappyDNS (~> 0.3)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+  - Socket.IO-Client-Swift (13.1.2):
+    - Starscream (~> 3.0.2)
+  - Starscream (3.0.4)
+  - UMengAnalytics (4.2.4)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - FMDB (~> 2.6)
+  - Masonry
+  - MBProgressHUD (~> 0.9.2)
+  - MJExtension (~> 3.0.10)
+  - MJRefresh
+  - Qiniu (~> 7.1)
+  - SDWebImage (~> 3.7.5)
+  - Socket.IO-Client-Swift (~> 13.1.2)
+  - UMengAnalytics
+
+SPEC CHECKSUMS:
+  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  HappyDNS: 691a3041128055d09866f86e6e9ca90f24da1f18
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  Qiniu: ae0fea1cc379fae1560d8748ac537e0fbeb8626e
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  Socket.IO-Client-Swift: 010d2f464bdd1849b859c0cd0500d68194401ac8
+  Starscream: f5da93fe6984c77b694366bf7299b7dc63a76f26
+  UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
+
+PODFILE CHECKSUM: c75ffb2a00bced408b686b1e631a750393b16013
+
+COCOAPODS: 1.3.1
